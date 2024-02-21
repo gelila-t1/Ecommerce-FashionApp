@@ -1,15 +1,13 @@
-import React, { Component } from 'react'
+import React from 'react'
 import { StyleSheet, Text, View } from 'react-native'
 
-export class OrderScreen extends Component {
-  render() {
-    return (
-      <View>
-        <Text> textInComponent </Text>
-      </View>
-    )
-  }
-}
+const OrderScreen=()=>{
+  return (
+    <View>
+      <Text> textInComponent </Text>
+    </View>
+  )}
+
 
 export default OrderScreen
 

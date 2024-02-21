@@ -12,41 +12,42 @@ import ProfileScreen from "../Screens/ProfileScreen";
 
 const stack = createStackNavigator();
 
- export const MainStackNavigator = () => { //created a function/component where latter will be called 
+const MainStackNavigator = () => { //created a function/component where latter will be called 
     //somewhere(app.js or index,js) i guess
     return (
-      <stack.navigator> 
+      <stack.Navigator> 
           {/* why not just <navigator/> bc we use stack nav here <nav/> can be...tab nav or any other */}
            {/* navigator then create screen to be displayed */}
     <stack.Screen name="home-screen" component={HomeScreen}/> 
     <stack.Screen name="detail-screen" component={DetailsScreen}/> 
     <stack.Screen name="product-screen" component={ProductScreen}/> 
-     </stack.navigator>
+     </stack.Navigator>
 
     )
 }
 
-export const CartStackNavigator=()=>{ 
+   const CartStackNavigator=()=>{ 
    return(
-    <stack.navigator> 
+    <stack.Navigator> 
     <stack.Screen name="cart-screen" component={CartScreen}/> 
-    </stack.navigator>
+    </stack.Navigator>
    )
 }
 
-export const OrderStackNavigator=()=>{ 
+    const OrderStackNavigator=()=>{ 
     return(
-     <stack.navigator> 
+     <stack.Navigator> 
      <stack.Screen name="order-screen" component={OrderScreen}/> 
-     </stack.navigator>
+     </stack.Navigator>
     )
  }
 
-export const ProfileStackNavigator=()=>{ 
+   const ProfileStackNavigator=()=>{ 
     return(
-     <stack.navigator> 
+     <stack.Navigator> 
      <stack.Screen name="profile-screen" component={ProfileScreen}/> 
-     </stack.navigator>
+     </stack.Navigator>
     )
  }
 
+export { MainStackNavigator, CartStackNavigator, OrderStackNavigator, ProfileStackNavigator};
