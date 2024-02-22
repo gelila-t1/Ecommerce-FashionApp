@@ -1,9 +1,11 @@
 import React, { useEffect }  from 'react'
 import { SafeAreaView } from 'react-native-safe-area-context'
-import { Pressable, StyleSheet, Text, View, Image } from 'react-native' 
+import { Pressable, StyleSheet, Text, View, Image, ScrollView } from 'react-native' 
 import MaterialIcons from "react-native-vector-icons/MaterialIcons"
 import userImage from "../../assets/userImage.png"
 import { TextInput } from 'react-native-gesture-handler'
+import fashionGirl from "../../assets/fashionGirl.png"
+import NewArrivals from '../Components/NewArrivals'
 
 const HomeScreen=({navigation})=>{
   useEffect(()=>{
@@ -44,6 +46,45 @@ const HomeScreen=({navigation})=>{
         placeholderTextColor={'#666666'}
         className="px-2"/>
       </View>
+      </View>
+
+
+      <View className=" flex-row ml-3 max-w-[320px] h-[200px] mt-6  overflow-hidden  bg-gray-500 rounded-2xl">
+        <View className="pl-4 pt-6">
+          <Text className="pl-4 font-bold text-3xl">50% Off</Text>
+          <Text className="text-lg pl-4">On Everything Today</Text>
+          <Text className="text-xs pl-4">With Code: AVVIMALDEV</Text>
+          <Pressable className="bg-black w-20 rounded-2xl ml-4 mt-4 p-2">
+        <Text className="text-white text-center">Get Now</Text>
+        </Pressable>
+        </View>
+      
+        <View>
+          <Image source={fashionGirl} className="h-48 w-24"/>
+          </View>
+      </View>
+
+
+      <View>
+
+        <View className="flex-row justify-between items-center mx-4 mt-6">
+        <Text className="text-lg font-extrabold">New Arrivals</Text>
+        <Pressable>
+          <Text className="text-gray-500">View All</Text>
+        </Pressable>
+        </View>
+        <ScrollView horizontal={true}
+        showsHorizontalScrollIndicator={false}>
+        <Pressable>
+        <NewArrivals/>
+        </Pressable>
+        <Pressable>
+        <NewArrivals/>
+        </Pressable>
+        <Pressable>
+        <NewArrivals/>
+        </Pressable>
+        </ScrollView>
       </View>
 </SafeAreaView>
      
